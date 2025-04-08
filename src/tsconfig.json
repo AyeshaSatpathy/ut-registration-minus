@@ -3,6 +3,6 @@
     "compilerOptions": {
         "composite": true,
         "lib": ["DOM", "ESNext"],
-        "types": ["chrome", "node"]
+        "types": ["chrome", "node", "vite/client", "unplugin-icons/types/react"]
     }
 }

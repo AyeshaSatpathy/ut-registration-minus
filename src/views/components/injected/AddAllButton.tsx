@@ -8,7 +8,7 @@ import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 
 /**
- * InjectedButton component renders a button that adds courses to UTRP from official MyUT calendar
+ * InjectedButton component renders a button that adds courses to UTRM from official MyUT calendar
  * and adds the courses to the active schedule.
  *
  * @returns The rendered button component or null if the container is not found.
@@ -34,7 +34,7 @@ export default function InjectedButton(): JSX.Element | null {
 
         // Make sure user is logged in
         const loggedInToUT = await background.validateLoginStatus({
-            url: 'https://utdirect.utexas.edu/apps/registrar/course_schedule/utrp_login/',
+            url: 'https://utdirect.utexas.edu/apps/registrar/course_schedule/utrm_login/',
         });
 
         if (loggedInToUT) {

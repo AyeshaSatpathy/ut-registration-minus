@@ -3,10 +3,10 @@ import getCourseTableRows from '@views/lib/getCourseTableRows';
 import { SiteSupport } from '@views/lib/getSiteSupport';
 
 /**
- * Migrates courses from UTRP v1 to a new schedule.
+ * Migrates courses from UTRM v1 to a new schedule.
  *
  * @param activeSchedule - The active schedule to migrate the courses to.
- * @param links - An array of UTRP v1 course URLs.
+ * @param links - An array of UTRM v1 course URLs.
  * @returns A promise that resolves when the migration is complete.
  *
  * This hook performs the following steps:

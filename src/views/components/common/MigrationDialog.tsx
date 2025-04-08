@@ -1,4 +1,4 @@
-import migrateUTRPv1Courses, { getUTRPv1Courses } from '@background/lib/migrateUTRPv1Courses';
+import migrateUTRMv1Courses, { getUTRMv1Courses } from '@background/lib/migrateUTRMv1Courses';
 import Text from '@views/components/common/Text/Text';
 import { useSentryScope } from '@views/contexts/SentryContext';
 import React, { useEffect, useState } from 'react';
@@ -18,7 +18,7 @@ function MigrationButtons({ close }: { close: () => void }): JSX.Element {
             if (processState === 1) {
                 try {
                     await chrome.storage.session.set({ pendingMigration: true });
-                    const successful = await migrateUTRPv1Courses();
+                    const successful = await migrateUTRMv1Courses();
                     if (successful) {
                         await chrome.storage.local.set({ finishedMigration: true });
                         await chrome.storage.session.remove('pendingMigration');
@@ -97,7 +97,7 @@ export function useMigrationDialog() {
     const showDialog = usePrompt();
 
     return async () => {
-        if ((await getUTRPv1Courses()).length > 0) {
+        if ((await getUTRMv1Courses()).length > 0) {
             showDialog(
                 {
                     title: 'This extension has updated!',
@@ -130,7 +130,7 @@ export function useMigrationDialog() {
  * MigrationDialog component.
  *
  * This component is responsible for checking if a migration has already been attempted
- * and if there are any courses from UTRPv1 that need to be migrated. If migration is needed,
+ * and if there are any courses from UTRMv1 that need to be migrated. If migration is needed,
  * it triggers the migration dialog.
  *
  * @returns An empty fragment.
@@ -147,7 +147,7 @@ export function MigrationDialog(): JSX.Element {
             // check if migration was already attempted
             if ((await chrome.storage.local.get('finishedMigration')).finishedMigration) return;
 
-            if ((await getUTRPv1Courses()).length > 0) showMigrationDialog();
+            if ((await getUTRMv1Courses()).length > 0) showMigrationDialog();
         };
 
         checkMigration();

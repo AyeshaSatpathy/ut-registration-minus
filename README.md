@@ -1,22 +1,22 @@
 # UT Registration Minus
 
-This is a tmp repo for onboarding new LHD members to the UTRP repo.
+This is a tmp repo for onboarding new LHD members to the UTRM repo.
 
-![UTRP Social Preview](images/UTRP_Social-Preview_Prod.svg)
+![UTRM Social Preview](images/UTRM_Social-Preview_Prod.svg)
 
 ![Chrome Web Store](https://img.shields.io/chrome-web-store/v/hboadpjkoaieogjimneceaahlppnipaa)
 ![Downloads](https://img.shields.io/chrome-web-store/d/hboadpjkoaieogjimneceaahlppnipaa)
 ![License](https://img.shields.io/github/license/Longhorn-Developers/UT-Registration-Plus)
 
-**UT Registration Plus (UTRP)** streamlines the process of registering for classes at UT Austin by reducing the chaos of juggling multiple tabs like Rate My Professor, Google Sheets, and the UT Course Schedule. With UTRP, you can simplify class selection and schedule management. We've all been there. 20 tabs of Rate My Professor, Google Spreadsheet, and the UT Course Schedule open and you still don't know what classes to take. 
+**UT Registration Minus (UTRM)** streamlines the process of registering for classes at UT Austin by reducing the chaos of juggling multiple tabs like Rate My Professor, Google Sheets, and the UT Course Schedule. With UTRM, you can simplify class selection and schedule management. We've all been there. 20 tabs of Rate My Professor, Google Spreadsheet, and the UT Course Schedule open and you still don't know what classes to take. 
 
 ## Demo
 
-![UTRP v2 Demo](images/UTRP-Demo.gif)
+![UTRM v2 Demo](images/UTRM-Demo.gif)
 
 ## Features
 
--   **Quick Access to Class Info**: For each class in the UT Course Schedule, UTRP provides a "breakdown" popup with direct links to RateMyProfessor, Course Evaluation Surveys (CES), and past syllabi.
+-   **Quick Access to Class Info**: For each class in the UT Course Schedule, UTRM provides a "breakdown" popup with direct links to RateMyProfessor, Course Evaluation Surveys (CES), and past syllabi.
 -   **Prerequisite & Restriction Highlights**: Displays course descriptions with highlighted details on prerequisites, restrictions, and other important info.
 -   **Grade Distribution Graphs**: View an aggregate and semester-specific graph of grade distributions for each course.
 -   **Saved Courses List**: Easily add courses to a list and view them in the extension popup. Copy unique numbers with a single click.
@@ -58,7 +58,7 @@ Contributions are welcome and encouraged! To get started:
 5. **Push** your branch: `git push origin feature/your-feature`.
 6. **Open a Pull Request**.
 
-For significant changes, it’s recommended to open an issue first to discuss the proposed updates.
+For significant changes, it's recommended to open an issue first to discuss the proposed updates.
 
 ## Development
 
@@ -197,11 +197,11 @@ Special thanks to the developers and contributors behind these amazing tools and
 -   [chrome-extension-toolkit](https://github.com/sghsri/chrome-extension-toolkit)
 -   [UT_Grade_Parser](https://github.com/doprz/UT_Grade_Parser)
 -   [eslint-plugin-import-essentials](https://github.com/doprz/eslint-plugin-import-essentials)
--   [UT Registration Plus v1.2.2.7](https://github.com/Longhorn-Developers/UT-Registration-Plus/tree/legacy) by @sghsri
+-   [UT Registration Minus v1.2.2.7](https://github.com/Longhorn-Developers/UT-Registration-Minus/tree/legacy) by @sghsri
 -   [UT Registration Planner](https://github.com/doprz/UT-Registration-Planner) by @doprz
--   [Figma Designs](https://www.figma.com/design/8tsCay2FRqctrdcZ3r9Ahw/UTRP) by @IsaDavRod
+-   [Figma Designs](https://www.figma.com/design/8tsCay2FRqctrdcZ3r9Ahw/UTRM) by @IsaDavRod
 -   [Longhorn Developers](https://github.com/Longhorn-Developers) - established in 2024
--   The UTRP devs, beta testers, and all supporters of the project!
+-   The UTRM devs, beta testers, and all supporters of the project!
 
 ## Activity
 

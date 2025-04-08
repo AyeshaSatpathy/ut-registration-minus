@@ -11,7 +11,7 @@ import switchSchedule from './switchSchedule';
  *
  * @returns A promise that resolves to an array of course links.
  */
-export async function getUTRPv1Courses(): Promise<string[]> {
+export async function getUTRMv1Courses(): Promise<string[]> {
     const { savedCourses } = await chrome.storage.sync.get('savedCourses');
 
     // Check if the savedCourses array is empty
@@ -24,19 +24,19 @@ export async function getUTRPv1Courses(): Promise<string[]> {
 }
 
 /**
- * Handles the migration of UTRP v1 courses.
+ * Handles the migration of UTRM v1 courses.
  *
  * This function checks if the user is logged into the UT course schedule page.
  * If the user is not logged in, it logs a message and exits. If the user is
- * logged in, it retrieves the UTRP v1 courses, creates a new schedule for the
+ * logged in, it retrieves the UTRM v1 courses, creates a new schedule for the
  * migration, switches to the new schedule, and migrates the courses to the
  * active schedule.
  *
  * @returns A promise that resolves when the migration is complete.
  */
-async function migrateUTRPv1Courses() {
+async function migrateUTRMv1Courses() {
     const loggedInToUT = await validateLoginStatus(
-        'https://utdirect.utexas.edu/apps/registrar/course_schedule/utrp_login/'
+        'https://utdirect.utexas.edu/apps/registrar/course_schedule/utrm_login/'
     );
 
     if (!loggedInToUT) {
@@ -44,7 +44,7 @@ async function migrateUTRPv1Courses() {
         return false;
     }
 
-    const oldCourses = await getUTRPv1Courses();
+    const oldCourses = await getUTRMv1Courses();
     console.log(oldCourses);
 
     const migratedCourses = await courseMigration(oldCourses);
@@ -67,7 +67,7 @@ async function migrateUTRPv1Courses() {
 
         // Remove the old courses from storage :>
         await chrome.storage.sync.remove('savedCourses');
-        console.log('Successfully migrated UTRP v1 courses');
+        console.log('Successfully migrated UTRM v1 courses');
     } else {
         console.warn('No courses successfully found to migrate');
     }
@@ -75,4 +75,4 @@ async function migrateUTRPv1Courses() {
     return true;
 }
 
-export default migrateUTRPv1Courses;
+export default migrateUTRMv1Courses;

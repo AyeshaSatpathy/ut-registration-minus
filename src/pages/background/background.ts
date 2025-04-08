@@ -34,7 +34,7 @@ chrome.runtime.onInstalled.addListener(details => {
 // migration/login logic
 chrome.tabs.onUpdated.addListener(async (tabId, changeInfo) => {
     // console.log(changeInfo);
-    if (changeInfo.url === 'https://utdirect.utexas.edu/apps/registrar/course_schedule/utrp_login/') {
+    if (changeInfo.url === 'https://utdirect.utexas.edu/apps/registrar/course_schedule/utrm_login/') {
         function openPopupAction() {
             chrome.tabs.onActivated.removeListener(openPopupAction);
             chrome.action.openPopup();

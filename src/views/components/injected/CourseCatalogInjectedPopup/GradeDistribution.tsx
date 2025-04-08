@@ -178,7 +178,7 @@ export default function GradeDistribution({ course }: GradeDistributionProps): J
             shared: true,
             useHTML: true,
             style: {
-                color: 'var(--Other-Colors-UTRP-Black, #1A2024)',
+                color: 'var(--Other-Colors-UTRM-Black, #1A2024)',
                 textAlign: 'center',
                 fontFamily: 'Roboto Flex, Roboto Flex Local',
                 fontSize: '0.88875rem',
